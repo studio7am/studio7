@@ -11,6 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141201183708) do
+
+  create_table "clients", force: true do |t|
+    t.string   "name"
+    t.string   "company"
+    t.string   "site"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.string   "task"
+    t.text     "body"
+    t.string   "imagePC"
+    t.string   "imageTablet"
+    t.string   "imagePhone"
+    t.string   "link"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["client_id"], name: "index_projects_on_client_id"
 
 end

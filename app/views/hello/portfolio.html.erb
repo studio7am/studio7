@@ -1,2 +1,15 @@
 <% provide(:title, 'Портфолио' ) %>
-portfolio.html.erb
+
+<div class="row masonry">
+ <% @projects.each do |project| %>
+		<div class="postCard">
+             <a href="/projects/<%= project.id %>">
+             <img src="http://placehold.it/300x300" class="img-responsive img-rounded"></a>
+             <h4>
+             <a href="/projects/<%= project.id %>">
+             	<%= project.name %>
+              </a>
+             </h4>
+         </div>
+   <% end %>
+ </div>

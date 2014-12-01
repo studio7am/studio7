@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="container">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li class="<%= is_active?(yo_path) %>">
+          <a href="/yo"><i class="fa fa-bars fa-fw"></i>Главная</a>
+        </li>
+        <li class="<%= is_active?(clients_path) %>">
+          <a href="/clients"><i class="fa fa-bars fa-fw"></i>Клиенты</a>
+        </li>
+        <li class="<%= is_active?(projects_path) %>">
+          <a href="/projects"><i class="fa fa-bars fa-fw"></i>Проекты</a>
+        </li>
+
+       </ul>
+     </nav>
+    <a href="/" target="_blank" class="btn btn-warning btn-xs">На сайт</a>
+
+    <img src="/logo.png" class="logo pull-left">
+     
+    <h3 class="text-muted">Админка</h3>
+
+   </div>
+ </header>

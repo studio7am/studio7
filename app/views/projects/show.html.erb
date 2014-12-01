@@ -1,0 +1,30 @@
+<% provide(:title,  @project.name ) %>
+
+
+<div class="row">
+	<div class="col-lg-6 col-md-8 col-sm-12">
+		<div class="">
+			<h1><%= @project.name %></h1>
+         </div>
+         <p>
+         	<strong>Клиент:</strong>
+             <%= @project.client.company %>
+         </p>
+         <p>
+         	<strong>Задача:</strong>
+             <%= @project.task %>
+         </p>
+         <%= @project.body %>
+         <br>
+         <br>
+         <a href="<%= @project.link %>" target="_blank" class="btn btn-danger">Перейти на сайт</a>
+         <%= link_to 'Назад', portfolio_path, class: 'btn btn-info' %>
+     </div>
+     <aside class="col-lg-6">
+     	<div class="thumbnail">
+     		<img src="http://placehold.it/500x500" class="img-responsive">
+     	</div>
+
+     </aside>
+
+</div>

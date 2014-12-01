@@ -6,5 +6,7 @@ class HelloController < ApplicationController
   end
 
   def portfolio
+    @projects = Project.all
+  	
   end
 end

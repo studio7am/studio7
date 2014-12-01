@@ -2,6 +2,12 @@ Rails.application.routes.draw do
 
 
 
+  resources :projects
+
+  resources :clients
+
+  get 'backend/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,6 +15,9 @@ Rails.application.routes.draw do
   root 'hello#index'
   match '/service', to: 'hello#service', via: 'get'
   match '/portfolio', to: 'hello#portfolio', via: 'get'
+
+  match '/yo', to: 'backend#index', via: 'get'
+
 
 
 

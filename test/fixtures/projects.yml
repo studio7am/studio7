@@ -2,14 +2,20 @@
 
 one:
   name: MyString
-  client: MyString
   task: MyString
   body: MyText
+  imagePC: MyString
+  imageTablet: MyString
+  imagePhone: MyString
   link: MyString
+  client_id: 
 
 two:
   name: MyString
-  client: MyString
   task: MyString
   body: MyText
+  imagePC: MyString
+  imageTablet: MyString
+  imagePhone: MyString
   link: MyString
+  client_id: 
