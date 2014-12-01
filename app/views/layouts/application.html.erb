@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Студия 7 утра | <%= yield(:title) %></title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+                <li class="<%= is_active?(root_path) %>">
+                 <a href="/"><i class="fa fa-bars fa-fw"></i>Главная</a>
+                </li>
+                <li class="<%= is_active?(service_path) %>">
+                 <a href="/service"><i class="fa fa-bars fa-fw"></i>Услуги</a>
+                </li>
+                <li class="<%= is_active?(portfolio_path) %>">
+                 <a href="/portfolio"><i class="fa fa-bars fa-fw"></i>Портфолио</a>
+                </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Студия 7 утра</h3>
+      </div>
+  </div>
+
+
+<div class="container">
+  <%= yield %>
+</div>
+
+
+
+
+<script type="text/javascript">
+$( "table" ).addClass( "table table-hover table-bordered" );
+</script>
+
+</body>
+</html>
